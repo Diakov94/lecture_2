@@ -6,6 +6,11 @@
 html, body {
     min-height: 100vh;
     background: ghostwhite;
+    position: relative;
+}
+
+span {
+    cursor: default;
 }
 
 header, footer {
@@ -13,14 +18,26 @@ header, footer {
 }
 
 header > nav {
-    width: 100%;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
 
+header > nav > img {
+    cursor: pointer;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+main {
+    padding-bottom: 24px;
+}
+
 #user-name {
     text-align: center;
+    cursor: default;
 }
 
 #user-info {
@@ -28,9 +45,22 @@ header > nav {
     text-align: end;
 }
 
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#images > img {
+    min-width: calc(100% / 3);
+    max-width: 100%;
+}
+
 footer {
+    height: 24px;
     position: absolute;
     bottom: 0;
-    width: 100%;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
